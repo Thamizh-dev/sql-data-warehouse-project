@@ -31,16 +31,22 @@ EXEC bronze.load_bronze
 
 
 				SET @start_time = GETDATE();
+
 				PRINT '>> Truncating Table: bronze.crm_prd_info';
 				TRUNCATE TABLE bronze.crm_prd_info;
-				PRINT '>> Inserting Table: bronze.crm_prd_info';
-				BULK INSERT bronze.crm_cust_info
+
+				PRINT '>> Inserting Data Into: bronze.crm_prd_info';
+				BULK INSERT bronze.crm_prd_info
 				FROM 'C:\Users\Thamizh Selvan\OneDrive\文档\Tableau Tutorial\Sql Datawarehouse project\sql-data-warehouse-project\sql-data-warehouse-project\datasets\source_crm\prd_info.csv'
 				WITH (
 					FIRSTROW = 2,
 					FIELDTERMINATOR = ',',
 					TABLOCK
 				);
+
+
+				/* SELECT * from bronze.crm_prd_info; */
+							  
 				SET @end_time = GETDATE();
 				PRINT '>> Load Duration: ' + CAST (DATEDIFF(second, @start_time,@end_time) as NVARCHAR) + 'seconds';
 				PRINT '>> ---------------------';
