@@ -1,50 +1,62 @@
-# SQL-data-warehouse-project
-Creating a modern warehouse SQL project.
+# Data Warehouse Project – End-to-End Implementation
 
-Welcome to the Data Warehouse and Analytics Project repository!
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+Introduction
+This project is a full end-to-end implementation of a Data Warehouse, inspired by the work of Baraa Khatib Salkini. It follows a structured approach using Medallion Architecture (Bronze, Silver, Gold) to efficiently store, process, and analyze data.
 
-# 📖 Project Overview
-This project involves:
+The goal of this project is to demonstrate real-world data engineering workflows, including:
+✔️ Data Ingestion from multiple sources
+✔️ ETL Pipelines for transforming and cleaning data
+✔️ Star Schema Modeling for optimized reporting
+✔️ BI & Analytics to enable insights for business users
 
-Data Architecture: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
-ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
-Data Modeling: Developing fact and dimension tables optimized for analytical queries.
-Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+This repository contains SQL scripts, ETL pipelines, and data models to help anyone replicate and learn from the project step by step.
 
-SQL Development
-Data Architect
-Data Engineering
-ETL Pipeline Developer
-Data Modeling
-Data Analytics
-🛠️ Important Links & Tools:
-Everything is for Free!
+# 📖 Tools & Technologies Used 🛠️
 
-Datasets: Access to the project dataset (csv files).
-SQL Server Express: Lightweight server for hosting your SQL database.
-SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
-Git Repository: Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-DrawIO: Design data architecture, models, flows, and diagrams.
-Notion: All-in-one tool for project management and organization.
-Notion Project Steps: Access to All Project Phases and Tasks.
-🚀 Project Requirements
-Building the Data Warehouse (Data Engineering)
-Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+The following tools were used to build and manage the Data Warehouse:
+SQL Server Express – Lightweight database server for storing and querying data.
+SQL Server Management Studio (SSMS) – GUI tool for managing and interacting with SQL databases.
+Git & GitHub – Version control system to track project changes and collaborate.
+Draw.io – Used to design data architecture diagrams, data flow models, and schema diagrams.
+Notion – Used for project management, organizing tasks, and maintaining documentation.
 
-Specifications
-Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
-Data Quality: Cleanse and resolve data quality issues prior to analysis.
-Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-Scope: Focus on the latest dataset only; historization of data is not required.
-Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-BI: Analytics & Reporting (Data Analysis)
-Objective
-Develop SQL-based analytics to deliver detailed insights into:
+# Methodology
+This project is divided into seven key phases, each with specific tasks and deliverables:
 
-Customer Behavior
-Product Performance
-Sales Trends
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.
+1️⃣ Requirements Analysis 📋
+Identify and document data sources (CSV, databases, APIs).
+Define the scope and objectives of the Data Warehouse.
+Deliverables: Documented requirements, data source details.
+
+2️⃣ Data Architecture Design 🎨
+Implement Medallion Architecture (Bronze, Silver, Gold).
+Design data flow diagrams using Draw.io.
+Deliverables: Data architecture document, data flow diagrams.
+
+3️⃣ Project Initialization 🛠️
+Create project tasks and timelines in Notion.
+Set up GitHub repository, database schemas, and SQL Server.
+Deliverables: Git structure, database & schema setup.
+
+4️⃣ Bronze Layer 🥉 (Raw Data Storage)
+Extract data from source systems (CSV, APIs, Databases).
+Load raw data into the Bronze Layer.
+Deliverables: Stored raw data, validation of completeness.
+
+5️⃣ Silver Layer 🥈 (Cleansed & Processed Data)
+Transform, clean, and standardize the data.
+Validate and integrate data for consistency.
+Deliverables: Cleaned data stored in the Silver Layer.
+
+6️⃣ Gold Layer 🥇 (Business-Ready Data)
+Implement Star Schema modeling (fact & dimension tables).
+Create aggregated tables for reporting.
+Deliverables: Business-ready data, Star Schema model.
+
+7️⃣ Data Consumption 📈 (BI & Analytics)
+Create views and flat tables for reporting & dashboards.
+Optimize queries for business intelligence and machine learning.
+Deliverables: Data ready for SQL queries, BI reports, and analytics.
+
+
+
